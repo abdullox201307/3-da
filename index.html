@@ -3,19 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fake Store Products</title>
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>Fake Store Products</h1>
+    <h1 class="text-5xl text-blue-900 ">Mahsulot Katalogi</h1>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 30px;">
+      <select  id="categoryFilter" class="select select-info w-[200px]">
+        <option disabled selected value="all">Barcha Kategoriyalar</option>
+        <option value="men's clothing">Erkaklar kiyimi</option>
+        <option value="jewelery">Taqinchoqlar</option>
+        <option value="electronics">Elektronika</option>
+      </select>
+    
+      <select id="sortBy" class="select select-info w-[200px]">
+        <option value="default">Narx boyicha sarala</option>
+        <option value="asc">Arzondan qimmatroqqa</option>
+        <option value="desc">Qimmatdan arzonroqqa</option>
+      </select>
+    
+      <input type="text" id="searchInput" placeholder="Mahsulot qidirish..." class="input input-accent w-[200px]" />
+    </div>
+    
     <div id="productBox" class="product-list"></div>
     <div id="total" class="total-box">
   Umumiy xarajat: <span id="totalAmount">$0.00</span>
 </div>
 
   </div>
+  
 
   <script src="main.js"></script>
 </body>

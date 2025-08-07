@@ -78,7 +78,7 @@ h1 {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition:0.3s;
 }
 
 .card button:hover {
